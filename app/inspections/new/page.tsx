@@ -1,0 +1,1 @@
+import InspectionForm from '@/components/InspectionForm'; import { RoleGate } from '@/hooks/useRole'; export default function Page(){ return (<RoleGate allow={['fiscal','supervisor','admin']}><InspectionForm/></RoleGate>); }

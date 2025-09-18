@@ -1,0 +1,1 @@
+export default function Page(){ return (<div><h2>Verificação de Vistoria</h2><p>Esta página pode exibir dados públicos da vistoria.</p></div>) }

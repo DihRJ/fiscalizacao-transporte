@@ -1,0 +1,5 @@
+
+In Supabase Storage:
+- Create bucket: attachments (private)
+- Enforce path convention: {organization_id}/{owner_type}/{owner_id}/{filename}
+- Add the RLS policies provided at the bottom of schema.sql (copy/paste in Storage policies SQL editor).

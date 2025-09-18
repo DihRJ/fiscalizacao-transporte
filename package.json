@@ -1,0 +1,31 @@
+{
+  "name": "fiscalizacao-transporte",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint . --ext .ts,.tsx --fix"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.44.0",
+    "csv-parse": "^5.5.6",
+    "next": "14.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "pdfkit": "^0.13.0",
+    "qrcode": "^1.5.4",
+    "jsqr": "^1.4.0",
+    "xlsx": "^0.18.5",
+    "recharts": "^2.12.7",
+    "nodemailer": "^6.9.13"
+  },
+  "devDependencies": {
+    "@types/node": "^20.11.30",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "typescript": "^5.4.5"
+  }
+}

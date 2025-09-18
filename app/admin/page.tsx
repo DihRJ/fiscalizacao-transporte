@@ -1,0 +1,1 @@
+import { RoleGate } from '@/hooks/useRole'; export default function Page(){ return (<RoleGate allow={['admin','supervisor']}><div><h2>Administração</h2><ul><li><a href="/admin/users">Usuários & Papéis</a></li><li><a href="/admin/audit">Auditoria</a></li></ul></div></RoleGate>); }

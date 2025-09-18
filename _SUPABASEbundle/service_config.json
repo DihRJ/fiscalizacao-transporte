@@ -1,0 +1,70 @@
+{
+  "defaults": {
+    "peak_headway_min": 15,
+    "offpeak_headway_min": 30,
+    "evening_headway_min": 30,
+    "weekend_headway_min": 30,
+    "duration_min": 45
+  },
+  "per_line": {
+    "501A": {
+      "peak_headway_min": 10,
+      "offpeak_headway_min": 20,
+      "duration_min": 42
+    },
+    "510A": {
+      "duration_min": 38
+    },
+    "510B": {
+      "duration_min": 40
+    },
+    "510C": {
+      "duration_min": 35,
+      "circular": true
+    }
+  },
+  "calendar": {
+    "weekday": {
+      "blocks": [
+        [
+          "06:00",
+          "09:00",
+          "peak"
+        ],
+        [
+          "09:00",
+          "16:00",
+          "offpeak"
+        ],
+        [
+          "16:00",
+          "19:00",
+          "peak"
+        ],
+        [
+          "19:00",
+          "22:00",
+          "evening"
+        ]
+      ]
+    },
+    "saturday": {
+      "blocks": [
+        [
+          "07:00",
+          "22:00",
+          "weekend"
+        ]
+      ]
+    },
+    "sunday": {
+      "blocks": [
+        [
+          "07:00",
+          "22:00",
+          "weekend"
+        ]
+      ]
+    }
+  }
+}

@@ -1,0 +1,3 @@
+organization_id,line_code,planned_vehicle_prefix,planned_departure,planned_arrival,block_code,shift
+00000000-0000-0000-0000-000000000001,510C,BUS-001,2025-09-19 06:00:00,2025-09-19 06:45:00,B1,Manhã
+00000000-0000-0000-0000-000000000001,510C,BUS-001,2025-09-19 07:00:00,2025-09-19 07:45:00,B1,Manhã
