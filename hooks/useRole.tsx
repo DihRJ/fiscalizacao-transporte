@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { supabase } from '@/lib/supabaseClient';
 
 export type Role = 'admin' | 'supervisor' | 'fiscal' | 'auditor' | 'controle';
@@ -20,7 +20,7 @@ export function useRole(organization_id?: string){
   return { role, loading };
 }
 
-export function RoleGate({ allow, children }:{ allow: Role[]; children: any }){
+export function RoleGate({ allow, children }:{ allow: Role[]; children: React.ReactNode }){
   const { role, loading } = useRole();
   if (loading) return <div className="card">Carregando permissões...</div>;
   if (!role || !allow.includes(role)) return <div className="card">Acesso negado.</div>;
