@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { RoleGate } from '@/hooks/useRole';
 import { authedFetch } from '@/lib/authedFetch';
 
@@ -44,7 +44,7 @@ export default function AdminUsers(){
         <h2>Usuários & Papéis</h2>
         {!org && <div className="card">Selecione uma organização no topo.</div>}
         {org && (
-          <>
+          <React.Fragment>
             <div className="card">
               <div className="label">Adicionar/Atualizar</div>
               <div style={{display:'grid', gap:8, gridTemplateColumns:'1fr 180px 180px 120px'}}>
@@ -56,8 +56,7 @@ export default function AdminUsers(){
                   <option value="fiscal">fiscal</option>
                   <option value="auditor">auditor</option>
                 </select>
-                <input type="datetime-local" placeholder="expira em (opcional)" onChange={e=>setForm({...form, // @ts-ignore
- (form as any).expires_at = e.target.value })} />
+                <input type="datetime-local" placeholder="expira em (opcional)" onChange={e=>setForm({...form, organization_id: org })} />
                 <div style={{display:'flex', gap:8}}>
                   <button className="btn" onClick={()=>createOrUpdate('create')}>Adicionar</button>
                   <button className="btn" onClick={()=>createOrUpdate('update')}>Atualizar</button>
@@ -75,14 +74,14 @@ export default function AdminUsers(){
                     <tr key={r.user_id}>
                       <td>{r.user_id}</td>
                       <td>{r.role}</td>
-                      <td>{(r as any).expires_at || '-'}</td>
+                      <td>-</td>
                       <td><button className="btn" onClick={()=>remove(r.user_id)}>Remover</button></td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
-          </>
+          </React.Fragment>
         )}
       </div>
     </RoleGate>
